@@ -1,0 +1,107 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-debugger": "error",
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "computed-property-spacing": [
+      "error",
+      "never"
+    ],
+    "no-trailing-spaces": "error",
+    "keyword-spacing": "error",
+    "spaced-comment": [
+      2,
+      "always",
+      {
+        "line": {
+          "markers": [
+            "/"
+          ],
+          "exceptions": [
+            "-",
+            "+",
+            "/"
+          ]
+        },
+        "block": {
+          "markers": [
+            "!"
+          ],
+          "exceptions": [
+            "*"
+          ]
+        }
+      }
+    ],
+    "vars-on-top": "error",
+    "no-undef": "error",
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "eol-last": "error",
+    "no-multiple-empty-lines": "error",
+    "guard-for-in": "error",
+    "no-nested-ternary": "error",
+    "no-eval": "error",
+    "no-with": "error",
+    "valid-typeof": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-continue": "error",
+    "no-console": "off",
+    "no-extra-semi": "error",
+    "no-unreachable": "error",
+    "no-unused-expressions": "error",
+    "max-len": [
+      "error",
+      160,
+      2
+    ],
+    "arrow-parens": "error",
+  }
+}
