@@ -15,6 +15,9 @@ const StyledDiv = styled.div`
 
 const ImageDiv = styled.div`
     margin-bottom: 1rem;
+    margin: 1rem 0;
+    height: 18rem;
+    width: 15rem;
 
     img {
         display: block;

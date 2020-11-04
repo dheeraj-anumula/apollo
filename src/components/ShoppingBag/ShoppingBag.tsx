@@ -29,7 +29,7 @@ const ShoppingBag = ({
                 })
                 return {
                     ...prevPrice,
-                    itemsPrice: _itemsPrice,
+                    itemsPrice: Math.round(_itemsPrice * 100) / 100,
                     total: _itemsPrice + shippingCharge + tax
                 }
             })

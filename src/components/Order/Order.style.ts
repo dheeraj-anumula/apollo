@@ -44,13 +44,13 @@ const OrderBody = styled.div`
     padding: 1rem;
 
     div:first-child {
-        align-items: center;
         width: 7rem;
         height: 8rem;
         margin-right: 1rem;
         img {
             width: 100%;
             height: 100%;
+            cursor: pointer;
         }
     }
 

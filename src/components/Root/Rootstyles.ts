@@ -61,7 +61,6 @@ const NavBar = styled.nav`
 
     .active-route {
         font-weight: bold;
-        color: black;
     }
 
     @media only screen and (min-width: 768px) {
@@ -71,6 +70,7 @@ const NavBar = styled.nav`
         margin-right: 1rem;
 
         a {
+            margin-right: .6rem;
             color: white;
             &:not(.active-route):hover {
                 color: #383838;

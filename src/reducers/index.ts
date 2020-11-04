@@ -9,6 +9,8 @@ import { ordersReducer } from 'reducers/orders'
 import { cartReducer } from 'reducers/cart'
 import { addressReducer } from 'reducers/address'
 import { headerReducer } from './header'
+import { cartErrorReducer } from './cartError'
+import { ordersErrorReducer } from './ordersError'
 
 const rootReducer = combineReducers({
     isLoading: loadingReducer,
@@ -16,6 +18,8 @@ const rootReducer = combineReducers({
     book: bookReducer,
     booksError: booksErrorReducer,
     bookError: bookErrorReducer,
+    cartError: cartErrorReducer,
+    ordersError: ordersErrorReducer,
     newBooksCount: newBooksCountReducers,
     orders: ordersReducer,
     cartItems: cartReducer,

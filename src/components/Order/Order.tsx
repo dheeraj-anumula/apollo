@@ -2,8 +2,12 @@ import React, { ReactElement } from 'react'
 import { StyledOrder, OrderHeader, OrderBody } from './Order.style'
 import OrderType from 'types/Order'
 import formatDate from 'utils/helpers/formatDate'
+import { useHistory } from 'react-router-dom'
 
-const Order = ({ order }: { order: OrderType }) : ReactElement => {
+const Order = ({ order }: { order: OrderType }): ReactElement => {
+    const history = useHistory()
+    const handleImageClick = () => history.push(`/book/${order.book.id}`)
+
     return (
         <StyledOrder>
             <OrderHeader>
@@ -18,7 +22,7 @@ const Order = ({ order }: { order: OrderType }) : ReactElement => {
             </OrderHeader>
             <OrderBody>
                 <div>
-                    <img src={order.book.img} alt={order.book.name} />
+                    <img onClick={handleImageClick} src={order.book.img} alt={order.book.name} />
                 </div>
                 <div>
                     <h3>{order.book.name}</h3>

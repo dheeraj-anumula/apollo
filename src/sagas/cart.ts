@@ -1,4 +1,4 @@
-import { takeEvery, put, fork } from 'redux-saga/effects'
+import { takeEvery, put, fork, delay } from 'redux-saga/effects'
 import { deleteData, fetchData } from 'utils/api'
 import {
     emptyCart,
@@ -19,6 +19,7 @@ import Book from 'types/Book'
 const handleLoadCart = function* () {
     try {
         const orders: Cart[] = yield fetchData<Cart[]>('cart')
+        yield delay(200)
         yield put(setCart(orders))
     } catch (error) {
         yield put(setCartFail(error.toString()))

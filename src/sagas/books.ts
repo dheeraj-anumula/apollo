@@ -9,10 +9,10 @@ const handleLoadBooks = function* () {
     try {
         const booksCount = yield select(getBooksCount)
         const books: BookType[] = yield fetchData<BookType[]>(`books?_start=0&_end=${booksCount}`)
-        yield delay(500)
+        yield delay(200)
         yield put(setBooks(books))
     } catch (error) {
-        yield delay(500)
+        yield delay(200)
         yield put(setBooksError(error.toString()))
     }
 }
