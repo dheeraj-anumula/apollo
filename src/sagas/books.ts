@@ -2,6 +2,7 @@ import BookType from 'types/Book'
 import { setBooks, setBooksError, loadBooks, incrementBooks } from 'actions/books'
 import { takeEvery, put, select, delay } from 'redux-saga/effects'
 import { fetchData } from 'utils/api'
+import scrollOnLoadMore from 'utils/helpers/scrollOnLoadMore'
 
 const getBooksCount = (state: any) => state.newBooksCount
 
@@ -11,6 +12,7 @@ const handleLoadBooks = function* () {
         const books: BookType[] = yield fetchData<BookType[]>(`books?_start=0&_end=${booksCount}`)
         yield delay(200)
         yield put(setBooks(books))
+        scrollOnLoadMore(books.length)
     } catch (error) {
         yield delay(200)
         yield put(setBooksError(error.toString()))

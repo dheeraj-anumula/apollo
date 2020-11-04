@@ -92,7 +92,7 @@ export const ShippingAddress = ({ address }: ShippingAddressProps): ReactElement
                     </fieldset>
                 </form>
                 {isSaved ? <EditButton type="button" onClick={editHandler}> Edit </EditButton>
-                    : <SaveButton type="button" onClick={(event) => saveHandler(event)} > Save </SaveButton>}
+                    : <SaveButton type="button" onClick={saveHandler} > Save </SaveButton>}
             </StyledDiv>
             : <NoItems>Loading Address Failed</NoItems>
     )

@@ -20,7 +20,7 @@ const BookCard = ({book} : BookCardProps): ReactElement => {
     }
 
     return (
-        <Card>
+        <Card id={`${book.id}`}>
             <CardBody onClick={navigateToBook}>
                 <ImageDiv>
                     <Image src={book.img} alt={book.name} />
