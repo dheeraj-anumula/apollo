@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Button from 'styles/Button'
 
-const StyledDiv = styled.div`
+const StyledArticle = styled.article`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
       }
 `
 
-const ImageDiv = styled.div`
+const ImageSection = styled.section`
     margin-bottom: 1rem;
     margin: 1rem 0;
     height: 18rem;
@@ -31,7 +31,7 @@ const ImageDiv = styled.div`
       }
 `
 
-const BookDetails = styled.div`
+const BookSection = styled.section`
     margin-bottom: 1rem;
 
     h2 {
@@ -59,7 +59,7 @@ const BookDetails = styled.div`
     }
 `
 
-const ActionsDiv = styled.div`
+const ActionsSection = styled.section`
 
     @media only screen and (min-width: 768px) {
         margin-left: 2rem;
@@ -91,18 +91,18 @@ const BuyNowButton = styled(Button)`
     }
 `
 
-const BookDescription = styled.div`
+const BookDescriptionSection = styled.section`
     margin: 1rem 1rem 2rem;
     padding: 1rem;
     background-color: #f5f6fa;
 `
 
 export {
-    StyledDiv,
-    ImageDiv,
-    BookDetails,
-    ActionsDiv,
+    StyledArticle,
+    ImageSection,
+    BookSection,
+    ActionsSection,
     AddToCartButton,
     BuyNowButton,
-    BookDescription
+    BookDescriptionSection
 }

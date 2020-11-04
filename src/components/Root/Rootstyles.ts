@@ -5,7 +5,7 @@ const StyledRoot = styled.div`
     flex-direction: column;
     height: 100%;
 `
-const Header = styled.div`
+const Header = styled.header`
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,14 +80,14 @@ const NavBar = styled.nav`
     }
 `
 
-const Container = styled.div`
+const Container = styled.main`
     width: 90%;
     margin: 0 auto;
     flex: 1 0 auto;
     margin-bottom: 7rem;
 `
 
-const Footer = styled.div`
+const Footer = styled.footer`
     height: 3rem;
     background-color: #212121;
     flex-shrink: 0;

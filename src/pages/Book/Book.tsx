@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react'
 import {
-    StyledDiv,
-    ImageDiv,
-    BookDetails,
+    StyledArticle,
+    ImageSection,
+    BookSection,
     AddToCartButton,
     BuyNowButton,
-    BookDescription,
-    ActionsDiv
+    BookDescriptionSection,
+    ActionsSection
 } from './Book.styles'
 
 import { useEffect } from 'react'
@@ -49,12 +49,12 @@ const Book = ( { book, isLoading, bookError} : BookPropsType) : ReactElement => 
 
     const renderBook = () : any => (
         book ?
-            (<StyledDiv>
-                <ImageDiv>
+            (<StyledArticle>
+                <ImageSection>
                     <img src={book.img} />
-                </ImageDiv>
+                </ImageSection>
                 <div>
-                    <BookDetails>
+                    <BookSection>
                         <h2>{book.name}</h2>
                         <table>
                             <tbody>
@@ -72,17 +72,17 @@ const Book = ( { book, isLoading, bookError} : BookPropsType) : ReactElement => 
                                 </tr>
                             </tbody>
                         </table>
-                    </BookDetails>
-                    <ActionsDiv>
+                    </BookSection>
+                    <ActionsSection>
                         <AddToCartButton onClick={addToCartHandler}> Add to Cart</AddToCartButton>
                         <BuyNowButton onClick={buyBookHandler}> Buy Now</BuyNowButton>
-                    </ActionsDiv>
-                    <BookDescription>
+                    </ActionsSection>
+                    <BookDescriptionSection>
                         <h3>Description</h3>
                         <p>{book.description}</p>
-                    </BookDescription>
+                    </BookDescriptionSection>
                 </div>
-            </StyledDiv>)
+            </StyledArticle>)
             : (bookError && <Error>{bookError}</Error>)
     )
 

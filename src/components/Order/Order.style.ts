@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledOrder = styled.div`
+const StyledOrder = styled.section`
     display: flex;
     flex-direction: column;
     border: 1px solid lightgrey;
@@ -8,7 +8,7 @@ const StyledOrder = styled.div`
     margin-bottom: 1.25rem;
 `
 
-const OrderHeader = styled.div`
+const OrderHeader = styled.section`
     display: flex;
     justify-content: space-between;
     background-color: lightgrey;
@@ -39,7 +39,7 @@ const OrderHeader = styled.div`
 
 `
 
-const OrderBody = styled.div`
+const OrderBody = styled.section`
     display: flex;
     padding: 1rem;
 

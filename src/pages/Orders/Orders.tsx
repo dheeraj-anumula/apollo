@@ -18,12 +18,12 @@ const Orders = ({ isLoading, orders, ordersError }: OrdersPropsType) : ReactElem
 
     const renderOrders = () => (
         ordersError ? <NoItems>{ordersError}</NoItems> :
-            <div>
+            <article>
                 {!orders.length && <NoItems>You haven&apos;t placed any orders so far</NoItems>}
                 {orders && [...orders].reverse().map((order) => (
                     <Order key={order.id} order={order}></Order>
                 ))}
-            </div>
+            </article>
     )
 
     return isLoading ? <Spinner></Spinner> : renderOrders()

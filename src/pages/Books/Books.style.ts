@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledBooks = styled.div`
+const StyledBooks = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

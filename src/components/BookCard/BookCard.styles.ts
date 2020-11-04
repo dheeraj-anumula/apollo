@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Card = styled.div`
+const Card = styled.section`
     display: flex;
     flex-direction: column;
     position: relative;

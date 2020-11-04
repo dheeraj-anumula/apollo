@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Button from 'styles/Button'
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.section`
     width: 45%;
     margin: 0 2rem 2rem 0;
 
