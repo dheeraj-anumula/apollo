@@ -40,6 +40,7 @@ const handleEmptyCart = function* ({ cart }: EmptyCart) {
             yield fork(handleDeleteItem, cart[i])
         }
         yield put(emptyCartSuccess())
+        yield delay(2000)
         yield put(loadCart())
     } catch (error) {
         yield put(emptyCartFail(error.toString()))
